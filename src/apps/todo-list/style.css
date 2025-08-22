@@ -1,0 +1,98 @@
+.tags {
+    display:flex;
+    justify-content:space-between;
+}
+
+#list {
+}
+
+#form {
+ border: 2px solid green;
+ width: 20em;
+ margin-top:10%;
+ margin-left:auto;
+ margin-right:auto;
+padding:10px;
+ text-align:center;
+}
+
+#title {
+    text-align:left;
+}
+
+.form-add-item {
+    margin:2rem;
+}
+ input, textarea {
+    
+}
+
+#time {
+    display:flex;
+    flex-direction: row;
+}
+
+label {
+ 
+    margin-right:10%;
+    width:20%;
+    text-align:left;
+}
+
+#notes {
+    display:flex;
+    flex-direction:row;
+}
+#priority {
+    display:flex;
+    flex-direction:row;
+    justify: space-between;
+
+
+}
+
+.radio {
+
+    
+}
+
+li {
+    width:85%;
+    text-align:center;
+    padding:20px;
+    border: 2px solid grey;
+    list-style-type:none;
+    margin-top: 5%;
+    margin-left:auto;
+    margin-right:auto;
+   
+}
+
+ul {
+    overflow: scroll;
+    height: 20em;
+
+   margin:0;
+   padding:0;
+   width: 85%;
+   margin:auto;
+}
+
+body {
+    margin:0;
+}
+
+
+
+
+
+.deleteButton {
+    margin-right:20%;
+  
+    padding: 10px;
+}
+.editButton {
+    margin-left:20%;
+     
+        padding: 10px;
+}

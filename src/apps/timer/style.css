@@ -1,0 +1,38 @@
+#stopwatch {
+    display:flex;
+flex-direction:row;
+justify-content: space-around;
+ border:2px solid black;
+text-align:center;
+
+}
+.number {
+text-align:center;
+}
+
+.inputNumber {
+    text-align:center;
+    display:hidden;
+   
+}
+#timer {
+    border: 2px solid black; 
+   
+    padding:2px;
+}
+
+
+#buttons {
+
+     display:flex;
+  justify-content: space-around;
+    padding: 20px;
+}
+
+#start {
+    display:block;
+}
+
+#stop {
+    display:none;
+}

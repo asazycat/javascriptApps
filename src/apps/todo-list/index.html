@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" type="text/css" rel="stylesheet"/>
+    
+    <title>Todo List</title>
+</head>
+<body>
+    
+    
+   
+    <div id="list">
+        <h1>List of things</h1>
+        <ul id="todo-list">
+          
+        </ul>
+    </div>
+    <div>
+    <form id="form">
+        <div class="form-add-item" id="title">
+            <label fore="title" required>Title</label>
+            <input type="text" name="title">
+        </div>
+        <div class="form-add-item" id="notes">
+            <label for="notes">Notes</label>
+            <textarea name="notes" cols="1000"></textarea>
+        </div>
+        <div class="form-add-item" id="priority">
+            
+            <label for="priority">Priority level:</label>
+            <div class="radio">
+                <select name="priority">
+                <option value="Very High">Very High</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-add-item" id="time">
+             <label for="time">Time:</label>
+            <div>
+            <label for="hours">Hours:</label>
+            <input type="number" min="1" max="23" name="hours" required/> h
+            </div>
+            <div>
+            <label for="minutes">Minutes:</label>
+            <input type="number" min="1" max="59" name="minutes" required/> m
+            </div>
+        </div>
+        <button type="submit" id="submitter">Add Item</button>
+    </form>
+     </div>
+     <script src="./todo-list.js"></script>
+</body>
+</html>
