@@ -60,8 +60,8 @@
             todoList.replaceChildren(...updatedList)
         }
 
-        // if (e.target.innerText === 'edit') {
-            
-        // }
+        if (e.target.innerText === 'Edit') {
+            alert('this does not do anything')
+        }
     })
 } )()
