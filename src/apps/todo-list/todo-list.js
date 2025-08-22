@@ -45,6 +45,7 @@
         listItem = document.createElement('li')
         title = document.createElement('h1')
         notes = document.createElement('p')
+        priority = document.createElement('p')
         time = document.createElement('p')
         deleteButton = document.createElement('button')
         editButton = document.createElement('button')

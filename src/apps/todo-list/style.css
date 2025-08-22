@@ -110,7 +110,7 @@ li h1 {
 ul {
     overflow: scroll;
     height: 20em;
-  
+   scrollbar-width:none;
    margin:0;
    padding:0;
    width: 85%;
@@ -153,4 +153,10 @@ body {
 
 .editButton:hover {
       color:#FAB65C;
+}
+
+@media screen and (min-width: 700px) {
+   ul {
+    width:35%;
+    
 }
