@@ -16,32 +16,45 @@
     let clockContext = document.querySelector('#canvasClock')
     const clock = clockContext.getContext('2d')
     
-    let n = 0
+    let s = 0, m =0 , h = 0
     clock.beginPath();
-    clock.moveTo(250, 250);
+    clock.moveTo(450, 250);
      
         clock.arc(250, 250, 200, 0 , 2 * Math.PI)
         clock.closePath()
         clock.stroke()
-    clockContext.onclick = function () {
+    window.onload = function () {
         stopClock = setInterval(() => {
                  date = new Date()
             console.log(date.getSeconds())
-            n = date.getSeconds() / 30
-        n += 1 / 30
+            s = date.getSeconds() / 30
+            m = date.getMinutes() / 30
+        s += 1 / 30
         clock.reset()
         clock.beginPath();
-        clock.moveTo(250, 250);
+        clock.moveTo(450, 250);
         clock.arc(250, 250, 200, 0, 2 * Math.PI)
         clock.closePath()
         clock.stroke()
         clock.beginPath()
         clock.moveTo(250, 250)
-        
-        clock.arc(250, 250, 200, n * Math.PI, 0)
-        clock.stroke()
+        clock.arc(250, 250, 200, (1.5 + s)  * Math.PI, 0)
+            clock.stroke()
+             clock.beginPath()
+            clock.moveTo(250, 250)
+            clock.arc(250, 250, 200, (1.5 + m)  * Math.PI, 0)
+            clock.stroke()
        
-        if (parseInt(`${ n * 360}`) % 360 == 0) {console.log('a minute')}
+            if (date.getSeconds() === 0) {
+                
+                m += 1 / 30
+            clock.beginPath()
+            clock.moveTo(250, 250)
+            clock.arc(250, 250, 200, (1.5 + m)  * Math.PI, 0)
+                clock.stroke()
+                
+                console.log(date.getMinutes() + ' minutes')
+            }
     }, 1000)
     } 
    
