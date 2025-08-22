@@ -11,12 +11,12 @@
     let priority = document.createElement('p')
     let buttonDiv = document.createElement('div')
     let deleteButton = document.createElement('button')
-    // let editButton = document.createElement('button')
+    let editButton = document.createElement('button')
     const formObj = {}
    
         
     deleteButton.setAttribute('class', 'deleteButton')
-    // editButton.setAttribute('class', 'editButton')
+    editButton.setAttribute('class', 'editButton')
     form.addEventListener('submit', function (e) {
       
         e.preventDefault()
@@ -29,17 +29,17 @@
        
         title.innerText = formObj['title']
         notes.innerText = formObj['notes']
-        time.innerText = formObj['hours'] + ' ' + formObj['minutes']
+        time.innerText = `${formObj['hours']} hours ${formObj['minutes']} minutes`
         priority.innerText = formObj['priority']
-        deleteButton.innerText = 'delete'
-        // editButton.innerText = 'edit' 
+        deleteButton.innerText = 'Delete'
+        editButton.innerText = 'edit' 
         listItem.append(title)
         listItem.append(notes)
         listItem.append(time)
         listItem.append(priority)
         listItem.append(buttonDiv)
         listItem.append(deleteButton)
-        // listItem.append(editButton)
+        listItem.append(editButton)
     
         todoList.append(listItem)
         listItem = document.createElement('li')
@@ -47,13 +47,13 @@
         notes = document.createElement('p')
         time = document.createElement('p')
         deleteButton = document.createElement('button')
-        // editButton = document.createElement('button')
+        editButton = document.createElement('button')
         deleteButton.setAttribute('class', 'deleteButton')
-        // editButton.setAttribute('class', 'editButton')
+        editButton.setAttribute('class', 'editButton')
     })
 
     todoList.addEventListener('click', function(e) {
-        if (e.target.innerText === 'delete') {
+        if (e.target.innerText === 'Delete') {
             let List = Array.from(todoList.children)
             let updatedList = List.filter((element) => element !== e.target.parentElement)
             todoList.replaceChildren(...updatedList)

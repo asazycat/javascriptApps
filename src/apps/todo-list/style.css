@@ -1,3 +1,6 @@
+body {
+    background-color:#D8DFF0;
+}
 .tags {
     display:flex;
     justify-content:space-between;
@@ -7,13 +10,17 @@
 }
 
 #form {
- border: 2px solid green;
+ border-radius: 2px;
  width: 20em;
- margin-top:10%;
+ margin-top:5%;
  margin-left:auto;
  margin-right:auto;
 padding:10px;
  text-align:center;
+ color:#FFFAFA;
+   background-color:#4866E8;
+   font-family: FreeMono, monospace;
+   font-size: 1em;
 }
 
 #title {
@@ -50,6 +57,24 @@ label {
 
 
 }
+.listOfThings {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+   text-align:center;
+   font-size:3em;
+   color:#FFFAFA;
+   background-color:#4866E8;
+   margin-top:0;
+}
+
+#submitter {
+     border:0;
+        padding: 10px;
+        background-color:#4866E8;
+    font-family:FreeMono, monospace;
+    border-radius: 5px;
+    color:#FFFAFA;
+      border: #CFD1D1 solid;
+}
 
 .radio {
 
@@ -59,8 +84,8 @@ label {
 li {
     width:85%;
     text-align:center;
-    padding:20px;
-    border: 2px solid grey;
+    
+    background-color:#E8E8E8;
     list-style-type:none;
     margin-top: 5%;
     margin-left:auto;
@@ -68,10 +93,24 @@ li {
    
 }
 
+li h1 {
+    margin-top:0;
+    background-color: #4866E8;
+    color: #FFFAFA;
+    font-family: FreeMono, monospace;
+    padding:10px;
+    font-size: 1.5em;
+ 
+}
+ li p {
+    font-family: Comic Sans MS, Comic Sans, cursive
+ }
+
+
 ul {
     overflow: scroll;
     height: 20em;
-
+  
    margin:0;
    padding:0;
    width: 85%;
@@ -86,13 +125,32 @@ body {
 
 
 
-.deleteButton {
+.deleteButton  {
     margin-right:20%;
-  
+    border: #CFD1D1 solid;
     padding: 10px;
+    margin-bottom: 20px;
+    background-color:#4866E8;
+    font-family:FreeMono, monospace;
+    border-radius: 5px;
+    color:#FFFAFA;
+
+}
+
+.deleteButton:hover {
+    color:#FAB65C;
 }
 .editButton {
     margin-left:20%;
-     
+     border:0;
         padding: 10px;
+        background-color:#4866E8;
+    font-family:FreeMono, monospace;
+    border-radius: 5px;
+    color:#FFFAFA;
+      border: #CFD1D1 solid;
+}
+
+.editButton:hover {
+      color:#FAB65C;
 }
