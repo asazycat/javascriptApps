@@ -26,42 +26,59 @@
     window.onload = function () {
         stopClock = setInterval(() => {
                  date = new Date()
-            console.log(date.getSeconds())
+            console.log(date.getHours())
             s = date.getSeconds() / 30
             m = date.getMinutes() / 30
+            h = date.getHours() / 30
         s += 1 / 30
         clock.reset()
         clock.beginPath();
         clock.moveTo(450, 250);
-        clock.arc(250, 250, 200, 0, 2 * Math.PI)
+            clock.arc(250, 250, 200, 0, 2 * Math.PI)
+            clock.fillText('6', 250, 450)
         clock.closePath()
         clock.stroke()
+            
+
         clock.beginPath()
         clock.moveTo(250, 250)
-        clock.arc(250, 250, 200, (1.5 + s)  * Math.PI, 0)
-            clock.stroke()
-             clock.beginPath()
-            clock.moveTo(250, 250)
-            clock.arc(250, 250, 200, (1.5 + m)  * Math.PI, 0)
-            clock.stroke()
+        clock.arc(250, 250, 200, (1.5 + s) * Math.PI, 0)
+        clock.stroke()
+            
+
+        clock.beginPath()
+        clock.moveTo(250, 250)
+        clock.arc(250, 250, 200, (1.5 + m)  * Math.PI, 0)
+        clock.stroke()
+            
+        clock.beginPath()
+        clock.moveTo(250, 250)
+        clock.arc(250, 250, 200, 2 * (1.5 + h / 12)  * Math.PI, 0)
+        clock.stroke()
        
-            if (date.getSeconds() === 0) {
+        if (date.getSeconds() === 0) {
                 
                 m += 1 / 30
             clock.beginPath()
             clock.moveTo(250, 250)
             clock.arc(250, 250, 200, (1.5 + m)  * Math.PI, 0)
-                clock.stroke()
-                
-                console.log(date.getMinutes() + ' minutes')
+            clock.stroke()
             }
+            
+        if (date.getMinutes() === 0) {
+                
+                h += 1 / 30
+            clock.beginPath()
+            clock.moveTo(250, 250)
+            clock.arc(250, 250, 200, 2 * (1.5 + h / 12)  * Math.PI, 0)
+            clock.stroke()
+         }
     }, 1000)
     } 
    
     
 
     
-
 
 
 
