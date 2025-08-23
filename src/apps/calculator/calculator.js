@@ -46,7 +46,7 @@ const calculator = {
 
 
 function displayContents(output = '') {
-    console.log(displayNumberIntoCalculator.result == null ? '' : displayNumberIntoCalculator.result)
+   
     document.querySelector('.display').innerHTML = `<p>${output}</p>`
 }
 
