@@ -4,31 +4,36 @@ let displayNumberIntoCalculator
 let numPrevOutput
 let operation 
 const calculator = {
-     
+    result: '',
     input:0,
    
     initial: function (value) {
         this.input = value
+        this.result += `${value}`
         return this
       },
   
     add: function (num) {
             this.input += num
+            this.result += ` + ${num}`
             return this
         },
 
         subtract: function (num) {
            this.input -= num
+           this.result += ` - ${num}`
             return this
         },
 
         multiply: function (num) {
             this.input *= num
+            this.result += ` * ${num}`
             return this
         },
 
         divide: function (num) {
             this.input /= num
+            this.result += ` / ${num}`
             return this
         },
 
@@ -41,6 +46,7 @@ const calculator = {
 
 
 function displayContents(output = '') {
+    console.log(displayNumberIntoCalculator.result == null ? '' : displayNumberIntoCalculator.result)
     document.querySelector('.display').innerHTML = `<p>${output}</p>`
 }
 

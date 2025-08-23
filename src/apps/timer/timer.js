@@ -69,27 +69,6 @@
    
     
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     buttons.addEventListener('click', function (e) {
         
         if (e.target === start) {
