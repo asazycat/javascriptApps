@@ -18,7 +18,7 @@
     window.onload = function () {
         stopClock = setInterval(() => {
                  date = new Date()
-            console.log(date.getHours())
+           
             s = date.getSeconds() 
             m = date.getMinutes() 
             h = date.getHours() % 12
@@ -32,19 +32,22 @@
             
 
         clock.beginPath()
-        clock.moveTo(250, 250)
-        clock.arc(250, 250, 200, (Math.PI / 30) * s - Math.PI/2 * Math.PI, 0)
+        clock.moveTo(250, 250) 
+        clock.strokeStyle = 'blue'
+        clock.arc(250, 250, 200, (Math.PI / 30) * s - Math.PI/2, (Math.PI / 30) * s - Math.PI/2)
         clock.stroke()
             
 
         clock.beginPath()
         clock.moveTo(250, 250)
-        clock.arc(250, 250, 200, (Math.PI / 30) * m - Math.PI/2, 0)
+        clock.strokeStyle = 'red'
+        clock.arc(250, 250, 150, (Math.PI / 30) * m - Math.PI/2, (Math.PI / 30) * m - Math.PI/2)
         clock.stroke()
             
         clock.beginPath()
         clock.moveTo(250, 250)
-        clock.arc(250, 250, 200, (Math.PI / 6) * (h + m/60) - Math.PI/2, 0)
+        clock.strokeStyle = 'green'
+        clock.arc(250, 250, 100, (Math.PI / 6) * (h + m/60) - Math.PI/2, (Math.PI / 6) * (h + m/60) - Math.PI/2)
         clock.stroke()
        
         if (date.getSeconds() === 0) {
@@ -52,7 +55,8 @@
               
             clock.beginPath()
             clock.moveTo(250, 250)
-            clock.arc(250, 250, 200, (Math.PI / 30) * m - Math.PI/2, 0)
+            clock.strokeStyle = 'red'
+            clock.arc(250, 250, 150, (Math.PI / 30) * m - Math.PI/2, (Math.PI / 30) * m - Math.PI/2)
             clock.stroke()
             }
             
@@ -61,7 +65,8 @@
                
             clock.beginPath()
             clock.moveTo(250, 250)
-            clock.arc(250, 250, 200, (Math.PI / 6) * (h + m/60) - Math.PI/2 , 0)
+            clock.strokeStyle = 'green'
+            clock.arc(250, 250, 100, (Math.PI / 6) * (h + m/60) - Math.PI/2 , (Math.PI / 6) * (h + m/60) - Math.PI/2)
             clock.stroke()
          }
     }, 1000)
