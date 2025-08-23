@@ -2,7 +2,7 @@
 
 
 (function () {
-    let minute = 0, second = 0, deci_second = 0, intervalId, stopClock;
+    let minute = 0, second = 0, deci_second = 0, s = 0, m =0 , h = 0, date = 0, intervalId, stopClock;
     const buttons = document.querySelector('#buttons');
     const start = document.querySelector('#start');
     const stop = document.querySelector('#stop');
@@ -11,18 +11,10 @@
     const seconds = document.querySelector('#seconds')
     const minutes = document.querySelector('#minutes')
     const timeElasped = document.querySelector('#timeElasped')
- 
-    let date = 0
-    let clockContext = document.querySelector('#canvasClock')
+    const clockContext = document.querySelector('#canvasClock')
     const clock = clockContext.getContext('2d')
     
-    let s = 0, m =0 , h = 0
-    clock.beginPath();
-    clock.moveTo(450, 250);
-     
-        clock.arc(250, 250, 200, 0 , 2 * Math.PI)
-        clock.closePath()
-        clock.stroke()
+  
     window.onload = function () {
         stopClock = setInterval(() => {
                  date = new Date()
