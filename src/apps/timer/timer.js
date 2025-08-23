@@ -44,7 +44,7 @@
             
         clock.beginPath()
         clock.moveTo(250, 250)
-        clock.arc(250, 250, 200, (Math.PI / 6) * h - Math.PI/2, 0)
+        clock.arc(250, 250, 200, (Math.PI / 6) * (h + m/60) - Math.PI/2, 0)
         clock.stroke()
        
         if (date.getSeconds() === 0) {
@@ -61,7 +61,7 @@
                
             clock.beginPath()
             clock.moveTo(250, 250)
-            clock.arc(250, 250, 200, (Math.PI / 6) * h - Math.PI/2, 0)
+            clock.arc(250, 250, 200, (Math.PI / 6) * (h + m/60) - Math.PI/2 , 0)
             clock.stroke()
          }
     }, 1000)
