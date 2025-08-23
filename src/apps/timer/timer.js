@@ -25,11 +25,19 @@
        
         clock.reset()
         clock.beginPath();
-        clock.moveTo(450, 250);
-        clock.arc(250, 250, 200, 0, 2 * Math.PI)
+        clock.moveTo(500, 250);
+         clock.arc(250, 250, 250, 0, 2 * Math.PI)
         clock.closePath()
         clock.stroke()
-            
+        
+            for (let i = 0; i < 360; i += 30) {
+                clock.beginPath();
+                clock.moveTo(250, 250);
+                clock.font = "25px serif";
+                clock.fillText(i/30 ,Math.cos((i - 90)* (Math.PI / 180)) * 200 + 250, Math.sin((i - 90) * (Math.PI / 180)) * 200 + 250, )
+                clock.closePath()
+                clock.stroke()
+            }
 
         clock.beginPath()
         clock.moveTo(250, 250) 
