@@ -34,8 +34,7 @@
         clock.reset()
         clock.beginPath();
         clock.moveTo(450, 250);
-            clock.arc(250, 250, 200, 0, 2 * Math.PI)
-            clock.fillText('6', 250, 450)
+        clock.arc(250, 250, 200, 0, 2 * Math.PI)
         clock.closePath()
         clock.stroke()
             
