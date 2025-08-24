@@ -56,7 +56,7 @@ export default (function () {
         clock.beginPath()
         clock.moveTo(150, 150)
         clock.strokeStyle = 'green'
-        clock.arc(150, 150, 50, (Math.PI / 6) * (h + m/60) - Math.PI/2, (Math.PI / 6) * (h + m/60) - Math.PI/2)
+        clock.arc(150, 150, 75, (Math.PI / 6) * (h + m/60) - Math.PI/2, (Math.PI / 6) * (h + m/60) - Math.PI/2)
         clock.stroke()
        
         if (date.getSeconds() === 0) {
@@ -75,7 +75,7 @@ export default (function () {
             clock.beginPath()
             clock.moveTo(150, 150)
             clock.strokeStyle = 'green'
-            clock.arc(150, 150, 50, (Math.PI / 6) * (h + m/60) - Math.PI/2 , (Math.PI / 6) * (h + m/60) - Math.PI/2)
+            clock.arc(150, 150, 75, (Math.PI / 6) * (h + m/60) - Math.PI/2 , (Math.PI / 6) * (h + m/60) - Math.PI/2)
             clock.stroke()
          }
     }, 1000)
