@@ -1,7 +1,7 @@
 
 
 
-(function () {
+export default (function () {
     const form = document.getElementById('form')
     let todoList = document.querySelector('#todo-list')
     let listItem = document.createElement('li')

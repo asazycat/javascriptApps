@@ -1,7 +1,7 @@
 
 
 
-(function () {
+export default (function () {
     let minute = 0, second = 0, deci_second = 0, s = 0, m =0 , h = 0, date = 0, intervalId, stopClock;
     const buttons = document.querySelector('#buttons');
     const start = document.querySelector('#start');
