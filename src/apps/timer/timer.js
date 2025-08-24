@@ -50,13 +50,13 @@ export default (function () {
         clock.beginPath()
         clock.moveTo(150, 150)
         clock.strokeStyle = 'red'
-        clock.arc(150, 150, 130, (Math.PI / 30) * m - Math.PI/2, (Math.PI / 30) * m - Math.PI/2)
+        clock.arc(150, 150, 100, (Math.PI / 30) * m - Math.PI/2, (Math.PI / 30) * m - Math.PI/2)
         clock.stroke()
             
         clock.beginPath()
         clock.moveTo(150, 150)
         clock.strokeStyle = 'green'
-        clock.arc(150, 150, 100, (Math.PI / 6) * (h + m/60) - Math.PI/2, (Math.PI / 6) * (h + m/60) - Math.PI/2)
+        clock.arc(150, 150, 50, (Math.PI / 6) * (h + m/60) - Math.PI/2, (Math.PI / 6) * (h + m/60) - Math.PI/2)
         clock.stroke()
        
         if (date.getSeconds() === 0) {
