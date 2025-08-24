@@ -1,8 +1,6 @@
 
 
 
-export default calculator.js
-
     
     
 let displayInput
