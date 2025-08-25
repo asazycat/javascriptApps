@@ -5,13 +5,14 @@ body {
 .clock {
   margin:auto;
    text-align:center;
-
+   
     
 }
 
 #canvasClock {
     margin: auto;
     border: 2px solid black;
+   
 }
 
 
@@ -37,7 +38,8 @@ text-align:center;
 }
 #timer {
     border: 2px solid black; 
-   
+    width:60%;
+    margin:auto;
     padding:2px;
 }
 
