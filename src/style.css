@@ -1,3 +1,52 @@
-@import url('../src/apps/calculator/style.css');
-@import url('../src/apps/timer/style.css');
-@import url('../src/apps/todo-list/style.css');
+body {
+    background-color: #039dfc;
+}
+
+
+#app {
+    border: 2px solid black;
+    display:grid;
+    width: 50%;
+    grid-template-rows: auto auto auto;
+    gap: 2em;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    padding: 2em;
+    border-radius: 2em;
+   
+}
+
+#app div {
+    border: 1px solid #28D1F7;
+    border-radius: 1em;
+    width:auto;
+    text-align: left;
+    padding:2em;
+    font-family: Impact, fantasy;
+    font-size: 1em;
+    background-color: #2596B0
+}
+a {
+    text-decoration: none;
+}
+a:link {
+  color: #F2D818;
+}
+
+/* visited link */
+a:visited {
+  color: #F2D818;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FFE100;
+}
+
+/* selected link */
+a:active {
+  color: #F2D818;
+}
