@@ -7,11 +7,31 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app">
-      <div><a href="./src/apps/calculator/index.html">Calculator</a></div>
-      <div><a href="./src/apps/todo-list/index.html">Todo List</a></div>
-      <div><a href="./src/apps/timer/index.html">Timer</a></div>
+    <div id="app-container">
+      <div id="software_list">
+          <div>Web Apps</div>
+          <div>Desktop Apps</div>
+          <div style="display:none">Engineering Apps</div>
+      </div>
+      <div id="app">
+          <div class="item">
+            <h1 class="itemTitle">JavaScript Applications</h1>
+            <p class="itemDescription">A collection of JavaScript applications. I used my understanding of basic and intermediate/advanced javascript to build a variety of apps. Some include a todo list, clock/timer and a simple calculator. Many more will be built in the future like a paint app or kanban board .etc.   </p>
+          </div>
+          <div class="item">
+            <h1 class="itemTitle">Javascript Games</h1> 
+            <p class="itemDescription">I have built games in 2d and 3d of whatever fun ideas I can come up with. A large of part them was built with Canvas and WebGL. </p>
+          </div>
+          <div class="item">
+            <h1 class="itemTitle">Minecraft Bedrock Addons</h1>
+            <p class="itemDescription">If it isn't obvious, these require Minecraft Bedrock Edition. Otherwise, just settle for the videos showcasing them. I play Minecraft and you can make add-ons and datapacks in JS, so I figured I would give it a try. </p>
+          </div>
+           <div class="item">
+            <h1 class="itemTitle">jQuery Applications</h1>
+            <p class="itemDescription"> Some of the stuff I've already built but this time, using jQuery and other JS libraries</p>
+          </div>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
