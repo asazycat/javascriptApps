@@ -1,10 +1,9 @@
-const app = document.getElementById('app');
-
-console.log(app)
-app.addEventListener('click', function (e) {
-    if (e.target.className.includes('item')) {
-        e.target.lastElementChild.style.display === 'block' ? e.target.lastElementChild.style.display = 'none' : e.target.lastElementChild.style.display = 'block'
-    }
-    
-})
+const APP = document.getElementById('app');
+let element;
+APP.addEventListener('click', function (e) {
+    element?.classList.toggle('itemDescription')
+    element = e.target.lastElementChild ?? e.target.nextElementSibling 
+    element?.classList.toggle('itemDescription')
+ 
+    })
     

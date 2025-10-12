@@ -13,7 +13,7 @@
   border:2px solid green;
   display:flex;  
   flex-direction:row;
-  justify-content:space-between; */
+  justify-content:space-between; 
   text-align:center;
   
 } 
@@ -33,6 +33,14 @@
 .item {
   border:2px solid black;
   display:block;
+}
+
+.itemTitle {
+  text-align:center;
+}
+
+.itemDescription {
+  display:none;
 }
 
 
