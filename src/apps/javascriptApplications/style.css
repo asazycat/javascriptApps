@@ -1,0 +1,39 @@
+#content {
+    border: 2px solid black;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    justify-content: center;
+    align-items:center;
+}
+
+#title {
+    text-align: center;
+}
+
+#apps_list {
+    display:grid;
+    grid-template-rows: 33% 33% 33%;
+    width:75%;
+    margin:auto;
+    border:2px solid red;
+    padding:2em;
+}
+
+.app_item {
+    text-align: center;
+    border:2px solid grey;
+    min-height: fit-content;
+    min-width: fit-content;
+}
+
+@media (min-width: 600px) {
+    #apps_list {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    width:75%;
+    margin:auto;
+    border:2px solid red;
+    padding:2em;
+    }
+}
