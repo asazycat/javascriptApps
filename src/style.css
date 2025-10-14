@@ -1,4 +1,9 @@
 
+
+body {
+  background-color: #2C2E43;
+}
+
 #app-container {
   height:100vh;
   display:flex;
@@ -10,8 +15,7 @@
 
 
 #software_list {
-  border:2px solid green;
-  display:flex;  
+  display:none;  
   flex-direction:row;
   justify-content:space-between; 
   text-align:center;
@@ -27,16 +31,27 @@
 #app {
   border: 2px solid black;
   padding:2em;
-  width:50%;
+  width:30%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 2%;
+  transition: all 5.5s ease;
 }
 
 .item {
+  padding:2em;
   border:2px solid black;
   display:block;
 }
 
 .itemTitle {
   text-align:center;
+  color:#FFD523;
+  
+}
+
+.itemTitle :hover {
+  transition: scale 0.5s ease-in;
 }
 
 .itemDescription {
