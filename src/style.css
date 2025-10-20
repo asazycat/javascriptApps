@@ -31,7 +31,7 @@ body {
 #app {
   border: 2px solid black;
   padding:2em;
-  width:30%;
+  width:fit-content;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 2%;
@@ -50,10 +50,14 @@ body {
   
 }
 
-.itemTitle :hover {
-  transition: scale 0.5s ease-in;
-}
+
 
 .itemDescription {
   display:none;
+}
+
+@media  (min-width: 700px){
+  #app {
+    width: 80%;
+  }
 }
