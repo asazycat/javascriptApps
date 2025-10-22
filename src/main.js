@@ -1,9 +1,13 @@
 const APP = document.getElementById('app');
-let element;
-APP.addEventListener('click', function (e) {
-    element?.classList.toggle('itemDescription')
-    element = e.target.lastElementChild ?? e.target.nextElementSibling 
-    element?.classList.toggle('itemDescription')
- 
-    })
-    
+
+APP.addEventListener('click', function(e) {
+    console.log(e.target.nextElementSibling)
+    if(e.target.className === 'itemTitle') {
+        e.target.className = 'itemTitleOff'
+        e.target.nextElementSibling.className = 'itemDescriptionOn'
+        document.body.style.backgroundImage = `url('../public/JavaScript.png')`
+    } else if(e.target.className === 'itemDescriptionOn'){
+         e.target.className = 'itemDescription'
+        e.target.previousElementSibling.className = 'itemTitle'
+    }
+})
