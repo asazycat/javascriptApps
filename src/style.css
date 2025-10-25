@@ -1,5 +1,8 @@
 body {
-    background-color: #E9D484;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../public/yellowImage.png');
+  
 }
 
 #app-container {
@@ -7,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    height:100vh
+    height:100vh;
 }
 
 
@@ -23,7 +26,7 @@ body {
 
 
 .item {
-    opacity: 0.5;
+ 
     border-radius: 2em;
     min-height: 25%;
     max-height: 25%;
@@ -60,6 +63,12 @@ body {
 
 
 @media (min-width: 800px) {
+    body {
+        transition: background-image 0.5s ease-out;
+    }
+      #app-container {
+        
+    }
     
     #app {
         flex-direction: row;
@@ -78,5 +87,12 @@ body {
         flex-direction: column;
         justify-content: center;
         height: 100%;
+    }  
+
+    .itemDescriptionOn {
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        justify-content: center;
     }
 }
