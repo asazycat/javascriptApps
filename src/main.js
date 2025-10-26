@@ -19,13 +19,13 @@ APP.addEventListener('click', function(e) {
         elementDes =  e.target.nextElementSibling
 
         if(e.target.textContent === 'JavaScript Applications and Games') {
-            document.body.style.backgroundImage = `url('../JavaScript.jpeg')`
+            document.body.classList.add('javascriptApps') 
             APP_LIST.style = 'display:grid'
         } else if(e.target.textContent === 'Minecraft Bedrock Addons') {
-            document.body.style.backgroundImage = `url('../minecraft.png')`
+            document.body.classList.add('minecraftAddon')
             APP_LIST.style = 'display:none'
         } else if(e.target.textContent === 'jQuery/Ajax Applications') {
-           document.body.style.backgroundImage = `url('../yellowImage.png')`
+           document.body.classList.add('jQuery') 
            APP_LIST.style = 'display:none'
         } 
 
@@ -35,7 +35,7 @@ APP.addEventListener('click', function(e) {
         e.target.className = 'itemDescription'
         e.target.previousElementSibling.className = 'itemTitle'
         APP_LIST.style = 'display:none'
-        document.body.style.backgroundImage = `url('../BackgroundMain.jpg')`
+        document.body.add('main') 
     } 
 })
 
