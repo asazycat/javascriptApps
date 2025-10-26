@@ -5,17 +5,7 @@ body {
 
 }
 
-.main {
-    background-image: url('../public/BackgroundMain.jpg');
-}
 
-.javascriptApps {
-    background-image: url('../JavaScript.jpeg');
-}
-
-.minecraftAddon {
-    background-image: url('../minecraft.png');
-}
 
 .jQuery {
     background-image: url('../yellowImage.png');
