@@ -19,13 +19,13 @@ APP.addEventListener('click', function(e) {
         elementDes =  e.target.nextElementSibling
 
         if(e.target.textContent === 'JavaScript Applications and Games') {
-            document.body.style.backgroundImage = `url('../public/JavaScript.jpeg')`
+            document.body.style.backgroundImage = `url('./public/JavaScript.jpeg')`
             APP_LIST.style = 'display:grid'
         } else if(e.target.textContent === 'Minecraft Bedrock Addons') {
-            document.body.style.backgroundImage = `url('../public/minecraft.png')`
+            document.body.style.backgroundImage = `url('./public/minecraft.png')`
             APP_LIST.style = 'display:none'
         } else if(e.target.textContent === 'jQuery/Ajax Applications') {
-           document.body.style.backgroundImage = `url('../public/yellowImage.png')`
+           document.body.style.backgroundImage = `url('./public/yellowImage.png')`
            APP_LIST.style = 'display:none'
         } 
 
