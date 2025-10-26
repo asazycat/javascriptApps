@@ -35,7 +35,7 @@ APP.addEventListener('click', function(e) {
         e.target.className = 'itemDescription'
         e.target.previousElementSibling.className = 'itemTitle'
         APP_LIST.style = 'display:none'
-        document.body.style.backgroundImage = `url('../public/BackgroundMain.jpg')`
+        document.body.style.backgroundImage = `url('../BackgroundMain.jpg')`
     } 
 })
 
