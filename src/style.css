@@ -100,8 +100,10 @@ body {
 
 @media (min-width: 800px) {
     body {
-        transition: background-image 0.5s ease-out;
+        background-image: url('../public/BackgroundMain.jpg');
+        background-repeat: no-repeat;
         background-size: 100% 100%;
+        transition: background-image 0.5s ease-out;
     }
       #app-container {
         display:block;
