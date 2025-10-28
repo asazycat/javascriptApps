@@ -1,3 +1,6 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+
 const APP = document.getElementById('app');
 const APP_LIST = document.getElementById('apps_list');
 const items = document.getElementsByClassName('items')
@@ -41,5 +44,14 @@ APP.addEventListener('click', function(e) {
 
 
 
+
+
+
+
+
+
+
+
+})
 
 
