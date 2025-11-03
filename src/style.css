@@ -1,15 +1,16 @@
 body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url('../public/BackgroundMain.jpg');
+    background-color: rgb(23, 35, 66);
+}
 
+a {
+    text-decoration: none;
+    color: black;
 }
 
 
 
-.jQuery {
-    background-image: url('../yellowImage.png');
-}
 
 #app-container {
     display:flex;
@@ -38,7 +39,7 @@ body {
     max-height: 25%;
     padding:1em;
     text-align: center;
-    background-color: #F4F754;
+    background-color: #caab21;
     /* transition: background-color 0.5s ease; */
 }
 
@@ -64,6 +65,11 @@ body {
     font-size: small;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
+
+  #welcome_parent {
+        display:none;
+        border:2px solid red;;
+    }
 
 /*Applications list CSS*/
 
@@ -92,17 +98,23 @@ body {
 
 .app_item {
     text-align: center;
-    border:2px solid grey;
+    background-color: rgba(216, 167, 41);
+    border-radius: 25px ;
     min-height: fit-content;
     min-width: fit-content;
     margin-top: 25%;
 }   
 
-.app_item :hover {
-    color: #FFD523;
-}
+
 
 /*Applications list CSS*/
+
+@media (max-width: 800px) {
+    *{ animation: none !important;
+    transition: none !important;}
+
+  
+}
 
 @media (min-width: 800px) {
     body {
@@ -120,9 +132,10 @@ body {
         flex-direction: row;
         height:20vh;
         justify-content: space-around;
-        max-width: 80%;
+        max-width: 100%;
         min-width: 80%;
         margin: auto;
+        font-size: 0.5em;
     }
 
     .item {
@@ -146,24 +159,61 @@ body {
         max-width: 100%;
         font-size: medium;
     }
+
+    #welcome_parent {
+        width: 75%;
+        text-align: center;
+        border: 2px solid #33ab28;
+        border-radius: 95px;
+        background-color: #176310;
+        color:#f5f905f4;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        margin: auto;
+        animation: myAnimation 0.5s linear 0.1s 1 normal 
+    }
  /*Applications list CSS*/
      #apps_list {
     display:grid;
     grid-template-columns: 33% 33% 33%;
-    width:75%;
+    width:90%;
     margin:auto;
     padding:2em;
     overflow-y:hidden ;
     overflow-x: hidden;
-   
+        
     }
     .app_item {
     text-align: center;
-    border:2px solid grey;
+    margin:15%;
     min-height: 25%;
     min-width: 25%;
-    margin: 15%;
-}
+    transition:  transform 0.2s ease-in, background-color 0.2s ease-in, margin-top 0.2s ease-in-out;
+    animation: myAnimation 0.5s linear 0.1s 1 normal ;
+    font-size: medium;
+    }  
+
+    .app_item {
+        margin-top: 2px;
+    }
+    .app_item:hover {
+        color: #000;
+        background-color: rgba(216, 167, 41, 0.5);
+        transform: scale(1.25);
+    }
 /*Applications list CSS*/
 
+}
+
+
+@media (min-width:1200px) {
+    
+}
+
+
+@keyframes myAnimation {
+  from {margin-top: 5%;}
+  to {margin-top: 0;}
 }
