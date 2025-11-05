@@ -9,6 +9,7 @@ let elementDes = null, elementTitle = null;
 APP.addEventListener('click', function(e) {
 
     if (window.innerWidth > 800) {
+       
           if(e.target.className === 'itemTitle') {
         e.stopPropagation()
         if(elementDes !== null && elementTitle !== null) {
@@ -47,7 +48,19 @@ APP.addEventListener('click', function(e) {
     } 
 
 } else {
-    console.log('inside lower bit')
+    if(e.target.textContent === 'JavaScript Applications and Games') {
+        console.log(APP_LIST.style)
+        APP_LIST.style.display = 'flex'
+        APP_LIST.style.position = 'absolute'
+        APP_LIST.style.backgroundColor = 'red'
+
+        APP_LIST.onclick = function() {
+            APP_LIST.style.display = 'none'
+        }
+    } else {
+        console.log('nothing')
+    }
+
 }
   
 })
