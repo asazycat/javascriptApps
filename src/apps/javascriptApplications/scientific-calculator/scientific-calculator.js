@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
+    const operations = document.getElementById('operations')
+    const showHideOperationsButton = document.getElementById('openCloseOperations');
     document.querySelector('.openCloseOperations').onclick = function () {
-        if(document.querySelector('.operations').style.display === 'none')
+        if(operations.className === 'operationsHide')
             {
-                document.querySelector('.operations').style.display = 'grid';
-                document.getElementsByClassName('openCloseOperations')[0].innerHTML = '▲'
+               operations.classList.remove('operationsHide')
+               operations.classList.add('operationsShow')
+               showHideOperationsButton.textContent = '▲'
             } else {
-                document.querySelector('.operations').style.display = 'none'
-                document.getElementsByClassName('openCloseOperations')[0].innerHTML = '&#x25BC;'
+                operations.classList.remove('operationsShow')
+                operations.classList.add('operationsHide')
+                showHideOperationsButton.innerHTML = '&#x25BC;'
             }
     }
  
 
-
+'▲'
 
 
 

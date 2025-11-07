@@ -16,11 +16,10 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    height:70vh;
+    height:100vh;
     width: 80%;
     margin: auto;
     margin-top:5%;
-   
 }
 
 #display {
@@ -51,16 +50,36 @@ main {
 }
 
 
-.operations {
+.operationsHide {
+    border: 2px solid green;
     text-align: center;
     display:grid;
     grid-template-columns: auto auto auto auto;
     gap:2em;
     padding: 2em;
+    overflow:hidden;
+    height:0%;
+    transition: height 0.2s ease-in;
+}
+
+.operationsShow {
+    border: 2px solid green;
+    text-align: center;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:2em;
+    padding: 2em;
+    overflow: scroll;
+    height:30%;
+    transition: height 0.2s ease-in;
+}
+
+.operationsShow div {
+    border: 2px solid blue;
 }
 
 
-.operations div {
+.operationsHide div {
     border: 2px solid blue;
 }
 

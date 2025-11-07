@@ -22,3 +22,25 @@ test('subtract the input from the previous result', () => {
 test('divide the input from the previoud result', () => {
     expect().toBe()
 })
+
+
+test('square the input', () => {
+    expect().toBe()
+})
+
+
+test('cube the input', () => {
+    expect().toBe()
+})
+
+
+
+test('power the input by a number', () => {
+    expect().toBe()
+})
+
+
+
+test('divide the input from the previoud result', () => {
+    expect().toBe()
+})
