@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const pageNumber = document.getElementById('number');
     const boardOne = document.getElementById('board1');
     const boardTwo = document.getElementById('board2');
     const boardThree = document.getElementById('board3');
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', (e) => {
         if(e.target.innerWidth < 800) {
+            pageNumber.textContent = '1/3'
             kanbanShow(0)
         } else if(e.target.innerWidth >= 800) {
             boardOne.classList.add('kanban_show')
