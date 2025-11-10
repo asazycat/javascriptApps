@@ -1,0 +1,64 @@
+body {
+    margin:0;
+}
+
+h1 {
+    border:2px solid red;
+    text-align: center;
+    margin:auto;
+    width:80%;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    justify-content: center;
+
+}
+
+
+.all_boards_show {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.kanban_show {
+    display: block;
+    width: 50%;
+    border: 2px solid grey;
+    margin:auto;
+    padding:1em;
+}
+
+.kanban_hide {
+    display: none;
+}
+
+.foot   {
+    display: block;
+    border:2px solid red;
+    text-align: center;
+}
+
+
+@media (min-width:800px) {
+    .all_boards_show {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+        justify-content: space-around;
+    }
+
+    .kanban_show {
+        width: 25%;
+    }
+
+    .foot {
+        display: none;
+    }
+}
