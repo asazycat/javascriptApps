@@ -2,7 +2,7 @@ body {
     margin:0;
 }
 
-h1 {
+.title_page {
     border:2px solid red;
     text-align: center;
     margin:auto;
@@ -32,7 +32,64 @@ main {
     border: 2px solid grey;
     margin:auto;
     padding:1em;
+    min-height: 500px;
+    max-height: 35em;
+    overflow: scroll;
 }
+
+.item {
+    border: 2px solid grey;
+    padding: 2px;
+    margin-top:5%;
+}
+
+.item_title {
+    border: 2px solid green;
+    padding: 2px;
+}
+
+.item_all_contents {
+    border:2px solid lightblue;
+    padding: 2px;
+}
+
+.item_content {
+    border: 2px solid blue;
+    padding: 2px;
+}
+
+.priority_content {
+    border: 2px solid violet;
+    padding: 2px;
+}
+
+.time_content {
+    border: 2px solid pink;
+    padding: 2px;
+} 
+
+.modify_buttons_div {
+    border: 2px solid brown;
+    padding: 2px;
+}
+
+.modify_buttons {
+    border: 2px solid yellow;
+    padding: 2px;
+}
+
+.change_buttons_div {
+    border: 2px solid black;
+    padding: 2px;
+}
+
+.change_buttons {
+    border: 2px solid purple;
+    padding: 2px;
+}   
+
+
+
 
 .kanban_hide {
     display: none;
@@ -56,6 +113,8 @@ main {
 
     .kanban_show {
         width: 25%;
+        min-height: 500px;
+        max-height: 35em;
     }
 
     .foot {

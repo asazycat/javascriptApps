@@ -7,10 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const boardThree = document.getElementById('board3');
     const nextButton = document.getElementById('next');
     const previousButton = document.getElementById('previous');
-
-    const div = document.createElement('div');
-    const title = document.createElement('h2');
-    const contents = document.createElement('p');
+    const listOfItems = document.getElementsByClassName('list_of_items')
+    let divItem = document.createElement('div');
+    let divContent = document.createElement('div');
+    let divModifyButtons = document.createElement('div');
+    let divChangeButtons = document.createElement('div');
+    let heading = document.createElement('h1');
+    let content_paragraph = document.createElement('p');
+    let priority_paragraph = document.createElement('p');
+    let time_paragraph = document.createElement('p') 
+    let edit_button = document.createElement('button');
+    let delete_button = document.createElement('button');
+    let next_button = document.createElement('button');
+    let previous_button = document.createElement('button');
     const formObj = {}
 
     const arr = ['1/3','2/3','3/3']
@@ -89,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.parentElement.nextElementSibling.style.display = 'block'
         
         });
-      
+     
     Array.from(addToBoardForm).forEach((eachForm) => {
         eachForm.firstElementChild.addEventListener('submit',function(e) {
             e.stopImmediatePropagation();
@@ -100,13 +109,106 @@ document.addEventListener('DOMContentLoaded', () => {
             for (const [key,value] of formData.entries()) {
            formObj[key] = value
             }
-        console.log(formObj)
+            let currentBoard = this.parentElement.parentElement;
+            console.log(currentBoard)
+             addTaskToBoard(currentBoard, formObj)
         })
 
         
     })
+});
+
+    Array.from(listOfItems).forEach((eachItemList) => {
+           
+        eachItemList.addEventListener('click', function(e) {
+            if(e.target.className = 'change_buttons') {
+            e.stopImmediatePropagation()
+            let board = e.currentTarget.parentElement
+            console.log(board)
+            let boardChildren = Array.from(board.lastElementChild.children)
+            let selectedDiv =  e.target.parentElement.parentElement;
+            let newList = boardChildren.filter((eachListItem) => eachListItem !== selectedDiv)
+            if(e.target.textContent === '-->') {
+                if(board.getAttribute('id') === 'board1') {
+                    console.log(boardTwo)
+                    boardTwo.lastElementChild.appendChild(selectedDiv)
+                    board.lastElementChild.replaceChildren(...newList)
+                } else if (board.getAttribute('id') === 'board2') {
+                    boardThree.lastElementChild.appendChild(selectedDiv)
+                    boardTwo.lastElementChild.replaceChildren(...newList)
+                }
+       }  else if (e.target.textContent === '<--') {
+            if(board.getAttribute('id') === 'board2') {
+                    console.log(boardTwo)
+                    boardOne.lastElementChild.appendChild(selectedDiv)
+                    boardTwo.lastElementChild.replaceChildren(...newList)
+                } else if (board.getAttribute('id') === 'board3') {
+                    boardTwo.lastElementChild.appendChild(selectedDiv)
+                    boardThree.lastElementChild.replaceChildren(...newList)
+                }
+       }
+       
+    }
 })
 
+
+})
+
+
+function addTaskToBoard(_board,_formObj) {
+    const {title, notes, priority, hours, minutes} = _formObj
+    console.log(_board, title, notes, priority, hours, minutes)
+
+    heading.textContent = title;
+    content_paragraph.textContent = notes;
+    priority_paragraph.textContent = priority;
+    time_paragraph.textContent = `${hours} ${hours < 2 ? 'hour' : 'hours'} and ${minutes} ${minutes < 2 ? 'minute' : 'minutes'} `;
+    edit_button.textContent = 'edit'
+    delete_button.textContent = 'delete';
+    next_button.textContent = '-->';
+    previous_button.textContent = '<--';
+
+    divItem.setAttribute('class', 'item');
+    divContent.setAttribute('class', 'item_all_contents');
+    divChangeButtons.setAttribute('class', 'change_buttons_div');
+    divModifyButtons.setAttribute('class', 'modify_buttons_div')
+    heading.setAttribute('class', 'item_title');
+    content_paragraph.setAttribute('class', 'item_content');
+    priority_paragraph.setAttribute('class', 'priority_content');
+    time_paragraph.setAttribute('class', 'time_content');
+    edit_button.setAttribute('class', 'modify_buttons');
+    delete_button.setAttribute('class', 'modify_buttons');
+    previous_button.setAttribute('class', 'change_buttons');
+    next_button.setAttribute('class', 'change_buttons');
+    divContent.appendChild(content_paragraph);
+    divContent.appendChild(priority_paragraph);
+    divContent.appendChild(time_paragraph);
+    divModifyButtons.appendChild(edit_button);
+    divModifyButtons.appendChild(delete_button);
+    divChangeButtons.appendChild(previous_button);
+    divChangeButtons.append(next_button);
+
+    divItem.appendChild(heading);
+    divItem.appendChild(divContent);
+    divItem.append(divModifyButtons);
+    divItem.appendChild(divChangeButtons);
+    
+    _board.lastElementChild.append(divItem)
+
+     divItem = document.createElement('div');
+     divContent = document.createElement('div');
+     divModifyButtons = document.createElement('div');
+     divChangeButtons = document.createElement('div');
+     heading = document.createElement('h1');
+     content_paragraph = document.createElement('p');
+     priority_paragraph = document.createElement('p');
+     time_paragraph = document.createElement('p') 
+     edit_button = document.createElement('button');
+     delete_button = document.createElement('button');
+     next_button = document.createElement('button');
+     previous_button = document.createElement('button');
+}
+ 
 });
 
 
